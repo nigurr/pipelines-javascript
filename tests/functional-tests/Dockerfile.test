@@ -1,0 +1,12 @@
+FROM node:boron
+
+# Create app directory
+WORKDIR /app
+
+# Copy files
+COPY . .
+
+# Install app dependencies
+RUN npm install --only=dev
+
+CMD ["npm", "test"]

@@ -1,0 +1,17 @@
+{
+  "name": "SeleniumTests",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Selenium Tests",
+  "author": {
+    "name": "",
+    "email": ""
+  },
+  "scripts": {
+    "test": "nyc --reporter=cobertura --reporter=html ./node_modules/.bin/mocha tests/unit-tests/**/*.js --reporter mocha-junit-reporter --reporter-options mochaFile=./TEST-RESULTS.xml"
+  },
+  "devDependencies": {
+    "nyc": "^12.0.2",
+    "selenium-webdriver": "^3.0.1"
+  }
+}
