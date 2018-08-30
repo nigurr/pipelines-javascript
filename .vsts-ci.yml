@@ -30,7 +30,7 @@ steps:
 
 - task: CopyFiles@2
   inputs:
-    contents: '**\tests**'
+    contents: '**\tests\**'
     targetFolder: '$(Build.ArtifactStagingDirectory)'
 
 - task: PublishBuildArtifacts@1
