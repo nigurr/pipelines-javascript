@@ -21,6 +21,6 @@
     "selenium-webdriver": "^3.0.1"
   },
   "scripts": {
-    "test": "nyc --reporter=cobertura --reporter=html ./node_modules/.bin/mocha tests/**/*.js --reporter mocha-junit-reporter --reporter-options mochaFile=./TEST-RESULTS.xml"
+    "test": "nyc --reporter=cobertura --reporter=html ./node_modules/.bin/mocha tests/functional-tests/**/*.js --reporter mocha-junit-reporter --reporter-options mochaFile=./TEST-RESULTS.xml"
   }
 }
