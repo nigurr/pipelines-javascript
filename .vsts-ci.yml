@@ -30,7 +30,7 @@ steps:
 
 - task: CopyFiles@2
   inputs:
-    sourceFolder: '$(System.DefaultWorkingDirectory)/**/functional-tests'
+    sourceFolder: '$(System.DefaultWorkingDirectory)/**/tests'
     targetFolder: '$(Build.ArtifactStagingDirectory)'
 
 - task: PublishBuildArtifacts@1
