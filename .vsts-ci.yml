@@ -1,7 +1,7 @@
 # Build NodeJS Express app using VSTS
 # https://docs.microsoft.com/vsts/pipelines/languages/javascript?view=vsts
 
-queue: 'Hosted Linux Preview'
+# queue: 'Hosted Linux Preview'
 
 steps:
 - task: NodeTool@0
@@ -10,6 +10,7 @@ steps:
   
 - script: |
     npm install
+    npm test
 
 - task: PublishTestResults@2
   inputs:
