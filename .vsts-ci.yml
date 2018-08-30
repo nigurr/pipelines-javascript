@@ -23,6 +23,14 @@ steps:
     summaryFileLocation: '$(System.DefaultWorkingDirectory)/**/*coverage.xml'
     reportDirectory: '$(System.DefaultWorkingDirectory)/**/coverage'
 
-- task: PublishBuildArtifacts@1
+- task: ArchiveFiles@2
   inputs:
-    pathtoPublish: '$(System.DefaultWorkingDirectory)'
+    rootFolderOrFile: '$(System.DefaultWorkingDirectory)'
+    includeRootFolder: false
+
+- task: CopyFiles@2
+  inputs:
+    sourceFolder: '$(System.DefaultWorkingDirectory)/**/functional-tests'
+    targetFolder: '$(Build.ArtifactStagingDirectory)'
+
+- task: PublishBuildArtifacts@1
