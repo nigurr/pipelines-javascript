@@ -28,4 +28,7 @@ build/Release
 node_modules
 /package-lock.json
 
+# Nyc output
+.nyc_output
+
 TEST-RESULTS.xml
