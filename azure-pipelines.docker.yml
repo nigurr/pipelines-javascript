@@ -9,10 +9,8 @@ variables:
 
 steps:
 - script: |
-    sudo docker build -f Dockerfile -t $(dockerId)/$(imageName) .
-    sudo docker login -u $(dockerId) -p $(dockerPassword)
-    sudo docker push $(dockerId)/$(imageName)
-    sudo docker run -t $(dockerId)/$(imageName)
+    npm install
+    npm test
   env:
     pswd: $(dockerPassword)
     
