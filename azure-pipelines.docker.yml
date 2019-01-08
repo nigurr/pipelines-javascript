@@ -8,7 +8,7 @@ variables:
   # define two more variables dockerId and dockerPassword in the build pipeline in UI
 
 steps:
-- script:
+- script: |
     docker build -f Dockerfile -t $(dockerId)/$(imageName) .
     docker login -u $(dockerId) -p $(dockerPassword)
     docker push $(dockerId)/$(imageName)
