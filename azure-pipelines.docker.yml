@@ -9,10 +9,10 @@ variables:
 
 steps:
 - script: |
-    docker build -f Dockerfile -t $(dockerId)/$(imageName) .
-    docker login -u $(dockerId) -p $(dockerPassword)
-    docker push $(dockerId)/$(imageName)
-    docker run -t $(dockerId)/$(imageName)
+    sudo docker build -f Dockerfile -t $(dockerId)/$(imageName) .
+    sudo docker login -u $(dockerId) -p $(dockerPassword)
+    sudo docker push $(dockerId)/$(imageName)
+    sudo docker run -t $(dockerId)/$(imageName)
   env:
     pswd: $(dockerPassword)
     
