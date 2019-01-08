@@ -9,6 +9,7 @@ variables:
 
 steps:
 - script: |
+    CHCP 65001
     docker build -f Dockerfile -t $(dockerId)/$(imageName) .
     docker login -u $(dockerId) -p $(dockerPassword)
     docker push $(dockerId)/$(imageName)
