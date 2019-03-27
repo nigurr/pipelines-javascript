@@ -4,5 +4,5 @@ var istanbul = require('gulp-istanbul')
 var fs = require('fs');
 
 gulp.task('default', function () {
-    gulp.src('tests/**/*.js);
+    gulp.src('tests/**/*.js');
 });
