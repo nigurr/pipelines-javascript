@@ -21,6 +21,6 @@
     "nyc": "^12.0.2"
   },
   "scripts": {
-    "test": "nyc --reporter=cobertura --reporter=html ./node_modules/.bin/mocha tests/**/*.js --reporter mocha-multi-reporters --reporter-options configFile=mochareporters.json"
+    "test": "./node_modules/.bin/mocha tests/**/*.js"
   }
 }
